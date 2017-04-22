@@ -24,7 +24,7 @@ final class LazyMiddleware
      * @param ContainerInterface $container
      * @param string             $serviceId
      */
-    public function __construct(ContainerInterface $container, $serviceId)
+    public function __construct(ContainerInterface $container, string $serviceId)
     {
         $this->container = $container;
         $this->serviceId = $serviceId;
