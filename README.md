@@ -4,6 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/downloads.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
 [![Latest Stable Version](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/v/stable.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/?branch=master)
 
 ## Description
 
@@ -19,9 +20,13 @@ Allow to lazyload commands, middlewares.
 
 Through [Composer](http://getcomposer.org) as [chubbyphp/chubbyphp-lazy-middleware][1].
 
+```sh
+composer require chubbyphp/chubbyphp-lazy-middleware "~1.0"
+```
+
 ## Usage
 
-```{.php}
+```php
 <?php
 
 use Chubbyphp\Lazy\LazyMiddleware;
