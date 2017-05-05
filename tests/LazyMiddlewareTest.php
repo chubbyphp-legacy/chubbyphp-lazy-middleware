@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
 /**
- * @covers Chubbyphp\Lazy\LazyMiddleware
+ * @covers \Chubbyphp\Lazy\LazyMiddleware
  */
 final class LazyMiddlewareTest extends \PHPUnit_Framework_TestCase
 {
