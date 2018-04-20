@@ -4,13 +4,14 @@ namespace Chubbyphp\Tests\Lazy;
 
 use Chubbyphp\Lazy\LazyMiddleware;
 use Interop\Container\ContainerInterface;
+use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
 /**
  * @covers \Chubbyphp\Lazy\LazyMiddleware
  */
-final class LazyMiddlewareTest extends \PHPUnit_Framework_TestCase
+final class LazyMiddlewareTest extends TestCase
 {
     public function testInvoke()
     {
