@@ -1,10 +1,12 @@
 # chubbyphp-lazy-middleware
 
 [![Build Status](https://api.travis-ci.org/chubbyphp/chubbyphp-lazy-middleware.png?branch=master)](https://travis-ci.org/chubbyphp/chubbyphp-lazy-middleware)
-[![Total Downloads](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/downloads.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
-[![Latest Stable Version](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/v/stable.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chubbyphp/chubbyphp-lazy-middleware/?branch=master)
+[![Total Downloads](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/downloads.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
+[![Monthly Downloads](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/d/monthly)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
+[![Latest Stable Version](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/v/stable.png)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
+[![Latest Unstable Version](https://poser.pugx.org/chubbyphp/chubbyphp-lazy-middleware/v/unstable)](https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware)
 
 ## Description
 
