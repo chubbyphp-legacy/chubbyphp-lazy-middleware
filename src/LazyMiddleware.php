@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Chubbyphp\Lazy;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 

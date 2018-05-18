@@ -3,8 +3,9 @@
 namespace Chubbyphp\Tests\Lazy;
 
 use Chubbyphp\Lazy\LazyMiddleware;
-use Interop\Container\ContainerInterface;
+use Interop\Container\ContainerInterface as InteropContainerInterface;
 use PHPUnit\Framework\TestCase;
+use Psr\Container\ContainerInterface as PsrContainerInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
@@ -13,9 +14,25 @@ use Psr\Http\Message\ResponseInterface as Response;
  */
 final class LazyMiddlewareTest extends TestCase
 {
-    public function testInvoke()
+    public function testInvokeInteropt()
     {
-        $container = $this->getContainer([
+        $container = $this->getInteroptContainer([
+            'service' => function (Request $request, Response $response, callable $next = null) {
+                return $response;
+            },
+        ]);
+
+        $request = $this->getRequest();
+        $response = $this->getResponse();
+
+        $middleware = new LazyMiddleware($container, 'service');
+
+        self::assertSame($response, $middleware($request, $response));
+    }
+
+    public function testInvokePsr()
+    {
+        $container = $this->getPsrContainer([
             'service' => function (Request $request, Response $response, callable $next = null) {
                 return $response;
             },
@@ -32,12 +49,33 @@ final class LazyMiddlewareTest extends TestCase
     /**
      * @param array $services
      *
-     * @return ContainerInterface
+     * @return InteropContainerInterface
      */
-    private function getContainer(array $services): ContainerInterface
+    private function getInteroptContainer(array $services): InteropContainerInterface
     {
-        /** @var ContainerInterface|\PHPUnit_Framework_MockObject_MockObject $container */
-        $container = $this->getMockBuilder(ContainerInterface::class)->setMethods(['get'])->getMockForAbstractClass();
+        /** @var InteropContainerInterface|\PHPUnit_Framework_MockObject_MockObject $container */
+        $container = $this->getMockBuilder(InteropContainerInterface::class)->setMethods(['get'])->getMockForAbstractClass();
+
+        $container
+            ->expects(self::any())
+            ->method('get')
+            ->willReturnCallback(function (string $id) use ($services) {
+                return $services[$id];
+            })
+        ;
+
+        return $container;
+    }
+
+    /**
+     * @param array $services
+     *
+     * @return PsrContainerInterface
+     */
+    private function getPsrContainer(array $services): PsrContainerInterface
+    {
+        /** @var PsrContainerInterface|\PHPUnit_Framework_MockObject_MockObject $container */
+        $container = $this->getMockBuilder(PsrContainerInterface::class)->setMethods(['get'])->getMockForAbstractClass();
 
         $container
             ->expects(self::any())

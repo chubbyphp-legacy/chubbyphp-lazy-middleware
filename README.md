@@ -15,7 +15,7 @@ Allow to lazyload middlewares.
 ## Requirements
 
  * php: ~7.0
- * container-interop/container-interop: ~1.1
+ * psr/container: ~1.0
  * psr/http-message: ~1.0
 
 ## Installation
@@ -23,7 +23,7 @@ Allow to lazyload middlewares.
 Through [Composer](http://getcomposer.org) as [chubbyphp/chubbyphp-lazy-middleware][1].
 
 ```sh
-composer require chubbyphp/chubbyphp-lazy-middleware "~1.0"
+composer require chubbyphp/chubbyphp-lazy-middleware "~1.1"
 ```
 
 ## Usage
