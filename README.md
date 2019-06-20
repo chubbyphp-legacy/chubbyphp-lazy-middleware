@@ -10,6 +10,8 @@
 
 ## Description
 
+**IMPORTANT**: If you're interested in a lazy adapter for psr-15 middlware, i suggest to use [chubbyphp/chubbyphp-slim-psr15][2]. Same applies if your searching for a psr-15 request handler.
+
 Allow to lazyload middlewares.
 
 ## Requirements
@@ -44,6 +46,7 @@ $response = $middleware($request, $response);
 ```
 
 [1]: https://packagist.org/packages/chubbyphp/chubbyphp-lazy-middleware
+[2]: https://github.com/chubbyphp/chubbyphp-slim-psr15#lazy-middleware-adapter
 
 ## Copyright
 
