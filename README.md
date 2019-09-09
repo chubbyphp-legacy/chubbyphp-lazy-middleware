@@ -10,6 +10,8 @@
 
 ## Description
 
+**DEPRECATED**: Middlewares in Slim3 are already lazy...
+
 **IMPORTANT**: If you're interested in a lazy adapter for psr-15 middleware, i suggest to use [chubbyphp/chubbyphp-slim-psr15][2]. Same applies if your searching for a psr-15 request handler.
 
 Allow to lazyload middlewares.
